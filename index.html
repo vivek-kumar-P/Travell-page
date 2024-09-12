@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="navbar">
+            <div id="logo">
+                <div id="logopic"><i class="ri-ancient-gate-fill"></i></div>
+                <div id="textlogo">AROWWAI<br>INDUSTRY</div>
+            </div>
+            <div id="navcontent">
+                <a href=""><p>Home</p></a>
+                <a href=""><p>About</p></a>
+                <a href=""><p>Trips</p></a>
+                <a href=""><p>Gallery</p></a>
+                <a href=""><p>Contact</p></a>
+
+                <input type="text" id="search-bar" placeholder="Enter Keyword... ">
+                <span class="search-icon"><i class="ri-search-line"></i></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div id="text">
+            <div id="boldtext"><p>Mesmerizing <br>Colors of <span>Aurora</span></p></div>
+            <div id="discription">Lorem ipsum dolor sit amet consectetur adipisicing. <br> Perferendis culpa vero magnam placeat, mollitia, possimus similique labore. <br> Sint ullam adipisci commodi autem voluptate veniam quia.</div>
+        </div>
+        <div id="dots">
+            <i class="ri-record-circle-line"></i>
+            <i class="ri-record-circle-line"></i>
+            <i class="ri-record-circle-line"></i>
+            <i class="ri-record-circle-line"></i>
+        </div>
+    </div>
+    <hr id="line">
+    <div id="footer">
+        <div id="ele">
+        <div id="translink">
+            <div id="transicon"><i class="ri-plane-line"></i></div>
+            <div id="facilities"><p>Flights to finland </p> <p id="price">$599/person</p></div>
+        </div>
+        <div id="translink">
+            <div id="transicon"><i class="ri-hotel-bed-fill"></i></div>
+            <div id="facilities"><p>Accommodation</p><p id="price">$199/person</p></div>
+        </div>
+        <div id="translink">
+            <div id="transicon"><i class="ri-suitcase-2-line"></i></div>
+            <div id="facilities"><p>Vaction Plan</p><p id="price">$970/person</p></div>
+        </div>
+        </div>
+        <button id="btn"><p>EXPLORE</p></button>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search-bar');
+        const itemsToSearch = document.querySelectorAll('navcontent a');
+    
+        searchInput.addEventListener('input', function () {
+            const searchTerm = searchInput.value.toLowerCase();
+            itemsToSearch.forEach((item) => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+    </script>
+    
+
+
+    
+</body>
+</html>
